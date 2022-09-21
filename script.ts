@@ -1,17 +1,16 @@
-import PromptSync = require('prompt-sync');
-import { Cliente } from "./Cliente";
+class Aviao {
+    public lugares : number;
+    public tamanho :number;
+    public velocidade : number;
 
-const prompt = PromptSync();
+    constructor(lugares:number, tamanho:number, velocidade:number){
+        this.lugares = lugares;
+        this.tamanho = tamanho;
+        this.velocidade = velocidade;
+    }
+}
+const aviao = new Aviao(70,39,850)
 
-const idade = Number(prompt('Digite a sua idade: '));
-const nome = prompt('Digite o seu nome: ');
-const cpf = Number(prompt('Digite o seu CPF: '));
 
+console.log(aviao)
 
-const cliente = new Cliente({
-  idade,
-  nome,
- cpf
-});
-
-console.log(`nome: ${nome} \n  idade: ${idade} \n cpf: ${cpf}`);
